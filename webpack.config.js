@@ -9,15 +9,7 @@ module.exports = {
     },
     output: {
         filename: '[name].js',
-        // library: {
-        //     // target: 'umd',
-        //     // name: 'MyLibrary',
-        //     // export: 'umd'
-        //     name: 'Mylibray',
-        //     type: 'umd'
-        // },
         library: 'largeNumber',
-        // libraryTarget: 'umd',
         libraryTarget: 'umd',
         libraryExport: 'testModule'
     },

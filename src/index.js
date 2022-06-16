@@ -49,6 +49,13 @@ const testModule ={
 }
 
 
+/**
+ * 此时webpack的output配置的为
+ * libraryExport: 'testModule'
+ * 以下三种写法均可以
+ * 在控制台输入largeNumber.testModule
+ * 可以得到{add: ƒ, testFun: ƒ}
+ */
 export { testModule }
 
 // module.exports = {testModule}
@@ -57,28 +64,16 @@ export { testModule }
 
 
 
+/** 
+ * 如果webpack的output配置的为
+ * libraryExport: 'default'
+ * 则此处导出值必须有default
+ */
+
+
 // export default testModule
 
 // module.exports.default = testModule;
 
 // exports.default = testModule;
-
-
-// module.exports = exports
-
-// let exports = module.exports;
-
-// console.log(module.exports === exports);
-
-// exports.default = testModule;
-
-// export default{
-//     add,
-//     testFun
-// };
-
-// module.exports = testModule;
-
-// export { testModule };
-// export { testModule }
 
